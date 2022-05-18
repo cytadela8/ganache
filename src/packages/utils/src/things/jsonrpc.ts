@@ -131,5 +131,10 @@ export enum JsonRpcErrorCode {
   /**
    * Version of JSON-RPC protocol is not supported
    */
-  JSON_RPC_VERSION_NOT_SUPPORTED = -32006
+  JSON_RPC_VERSION_NOT_SUPPORTED = -32006,
+  
+  /**
+   *  Request exceeds rate limit. Returned by Alchemy JSON-RPC
+   */
+  ALCHEMY_LIMIT_EXCEEDED = 429
 }
