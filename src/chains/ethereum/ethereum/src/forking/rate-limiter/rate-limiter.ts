@@ -77,7 +77,10 @@ function isExceededLimitError(
   return (
     hasOwn(response, "error") &&
     response.error != null &&
-    response.error.code === JsonRpcErrorCode.LIMIT_EXCEEDED
+    (
+      response.error.code === JsonRpcErrorCode.LIMIT_EXCEEDED || 
+      response.error.code === JsonRpcErrorCode.ALCHEMY_LIMIT_EXCEEDED
+    )
   );
 }
 
